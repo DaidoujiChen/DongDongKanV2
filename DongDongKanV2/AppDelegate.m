@@ -7,7 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    self.window.contentViewController = [MainViewController new];
+}
 
 @end

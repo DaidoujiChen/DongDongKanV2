@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		1C16CD921D49A83300E385B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16CD911D49A83300E385B3 /* AppDelegate.m */; };
 		1C16CD951D49A83300E385B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16CD941D49A83300E385B3 /* main.m */; };
-		1C16CD981D49A83300E385B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16CD971D49A83300E385B3 /* ViewController.m */; };
 		1C16CD9A1D49A83300E385B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C16CD991D49A83300E385B3 /* Assets.xcassets */; };
-		1C16CD9D1D49A83300E385B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C16CD9B1D49A83300E385B3 /* Main.storyboard */; };
 		1C16CDA51D49AFC500E385B3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C16CDA41D49AFC500E385B3 /* WebKit.framework */; };
 		1C16CDC91D49F7EC00E385B3 /* StreamingURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16CDC81D49F7EC00E385B3 /* StreamingURLParser.m */; };
+		1C5E504C1D4C8F1A000C822B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5E504A1D4C8F1A000C822B /* MainMenu.xib */; };
+		1C5E505E1D4CAE62000C822B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5E505C1D4CAE62000C822B /* MainViewController.m */; };
+		1C5E505F1D4CAE62000C822B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5E505D1D4CAE62000C822B /* MainViewController.xib */; };
 		1CB79DAF1D4BBFFB009BE23A /* PlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB79DAE1D4BBFFB009BE23A /* PlayerWindow.m */; };
 		1CD78A041D4C449000B2EC12 /* RuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD78A031D4C449000B2EC12 /* RuntimeHelper.m */; };
 /* End PBXBuildFile section */
@@ -23,14 +24,15 @@
 		1C16CD901D49A83300E385B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C16CD911D49A83300E385B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1C16CD941D49A83300E385B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C16CD961D49A83300E385B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1C16CD971D49A83300E385B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1C16CD991D49A83300E385B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1C16CD9C1D49A83300E385B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C16CD9E1D49A83300E385B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C16CDA41D49AFC500E385B3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1C16CDC71D49F7EC00E385B3 /* StreamingURLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingURLParser.h; sourceTree = "<group>"; };
 		1C16CDC81D49F7EC00E385B3 /* StreamingURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingURLParser.m; sourceTree = "<group>"; };
+		1C5E504B1D4C8F1A000C822B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1C5E505B1D4CAE62000C822B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1C5E505C1D4CAE62000C822B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1C5E505D1D4CAE62000C822B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		1CB79DAD1D4BBFFB009BE23A /* PlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerWindow.h; sourceTree = "<group>"; };
 		1CB79DAE1D4BBFFB009BE23A /* PlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerWindow.m; sourceTree = "<group>"; };
 		1CD78A021D4C449000B2EC12 /* RuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeHelper.h; sourceTree = "<group>"; };
@@ -69,12 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				1C16CDA71D49B11B00E385B3 /* Model */,
+				1C5E50591D4CAE62000C822B /* Controller */,
 				1C16CD901D49A83300E385B3 /* AppDelegate.h */,
 				1C16CD911D49A83300E385B3 /* AppDelegate.m */,
-				1C16CD961D49A83300E385B3 /* ViewController.h */,
-				1C16CD971D49A83300E385B3 /* ViewController.m */,
+				1C5E504A1D4C8F1A000C822B /* MainMenu.xib */,
 				1C16CD991D49A83300E385B3 /* Assets.xcassets */,
-				1C16CD9B1D49A83300E385B3 /* Main.storyboard */,
 				1C16CD9E1D49A83300E385B3 /* Info.plist */,
 				1C16CDA61D49B0D400E385B3 /* Frameworks */,
 				1C16CD931D49A83300E385B3 /* Supporting Files */,
@@ -115,6 +116,24 @@
 				1C16CDC81D49F7EC00E385B3 /* StreamingURLParser.m */,
 			);
 			path = StreamingParser;
+			sourceTree = "<group>";
+		};
+		1C5E50591D4CAE62000C822B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1C5E505A1D4CAE62000C822B /* MainViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1C5E505A1D4CAE62000C822B /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C5E505B1D4CAE62000C822B /* MainViewController.h */,
+				1C5E505C1D4CAE62000C822B /* MainViewController.m */,
+				1C5E505D1D4CAE62000C822B /* MainViewController.xib */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 		1CB79DAC1D4BBFE0009BE23A /* PlayerWindow */ = {
@@ -193,7 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C16CD9A1D49A83300E385B3 /* Assets.xcassets in Resources */,
-				1C16CD9D1D49A83300E385B3 /* Main.storyboard in Resources */,
+				1C5E505F1D4CAE62000C822B /* MainViewController.xib in Resources */,
+				1C5E504C1D4C8F1A000C822B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C16CD981D49A83300E385B3 /* ViewController.m in Sources */,
 				1C16CDC91D49F7EC00E385B3 /* StreamingURLParser.m in Sources */,
+				1C5E505E1D4CAE62000C822B /* MainViewController.m in Sources */,
 				1C16CD951D49A83300E385B3 /* main.m in Sources */,
 				1CB79DAF1D4BBFFB009BE23A /* PlayerWindow.m in Sources */,
 				1CD78A041D4C449000B2EC12 /* RuntimeHelper.m in Sources */,
@@ -216,12 +236,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1C16CD9B1D49A83300E385B3 /* Main.storyboard */ = {
+		1C5E504A1D4C8F1A000C822B /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1C16CD9C1D49A83300E385B3 /* Base */,
+				1C5E504B1D4C8F1A000C822B /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -315,6 +335,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DongDongKanV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.daidouji.DongDongKanV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -327,6 +348,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DongDongKanV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.daidouji.DongDongKanV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -1,16 +1,14 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  DongDongKanV2
 //
-//  Created by DaidoujiChen on 2016/7/28.
+//  Created by DaidoujiChen on 2016/7/30.
 //  Copyright © 2016年 DaidoujiChen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import "StreamingURLParser.h"
-#import "RuntimeHelper.h"
 
 @interface AVPlayerView (Private)
 
@@ -20,16 +18,17 @@
 
 @end
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @property (weak) IBOutlet WebView *webView;
 
 @property (nonatomic, strong) AVPlayerView *avPlayerView;
 @property (nonatomic, strong) PlayerWindow *playerWindow;
+@property (nonatomic, strong) NSString *animateTitle;
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 #pragma mark - PlayerWindowDelegate
 
@@ -66,6 +65,13 @@
 
 #pragma mark - WebResourceLoadDelegate
 
+- (void)webView:(WebView *)sender resource:(id)identifier didFinishLoadingFromDataSource:(WebDataSource *)dataSource {
+    NSString *title = [[sender stringByEvaluatingJavaScriptFromString:@"document.title"] stringByReplacingOccurrencesOfString:@" - 巴哈姆特動畫瘋" withString:@""];
+    if (![self.animateTitle isEqualToString:title]) {
+        self.animateTitle = title;
+    }
+}
+
 - (id)webView:(WebView *)sender identifierForInitialRequest:(NSURLRequest *)request fromDataSource:(WebDataSource *)dataSource {
     
     // 取得帶有 .m3u8 的網址
@@ -76,7 +82,7 @@
         NSString *fixedURLString = [self fixedURLString:request.URL.absoluteString];
         
         // 拆解所有影片的 url
-        __weak ViewController *weakSelf = self;
+        __weak MainViewController *weakSelf = self;
         [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:fixedURLString] completionHandler: ^(NSData *data, NSURLResponse *response, NSError *error) {
             if (!error) {
                 NSString *videosString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -90,7 +96,7 @@
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (weakSelf) {
-                        __strong ViewController *storngSelf = weakSelf;
+                        __strong MainViewController *storngSelf = weakSelf;
                         [storngSelf playFromURLs:validVideos];
                     }
                 });
@@ -136,7 +142,7 @@
     else {
         [newWindow makeKeyAndOrderFront:NSApp];
     }
-    
+    newWindow.title = self.animateTitle;
     return newWindow;
 }
 

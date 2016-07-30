@@ -12,6 +12,8 @@
 
 @implementation AppDelegate
 
+#pragma mark - Application Life Cycle
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.window.contentViewController = [MainViewController new];
     NSRect windowFrame = [PositionManager frameForKey:@"MainWindowFrame"];

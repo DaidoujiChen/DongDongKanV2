@@ -7,10 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <WebKit/WebKit.h>
-#import "PlayerWindow.h"
+#import "AnimateWebView.h"
 
-@interface MainViewController : NSViewController <NSWindowDelegate, PlayerWindowDelegate>
+@interface MainViewController : NSViewController <NSWindowDelegate, AnimateWebViewDelegate>
 
 - (void)storeFinalWindowsFrame;
 

@@ -10,9 +10,12 @@
 
 @protocol PlayerWindowDelegate;
 
-@interface PlayerWindow : NSWindow
+@interface PlayerWindow : NSWindow <NSWindowDelegate>
 
 @property (nonatomic, weak) id<PlayerWindowDelegate> keyboardPressDelegate;
+
+- (instancetype)initWithFrame:(NSRect)frame;
+- (void)playFromURL:(NSURL *)url;
 
 @end
 

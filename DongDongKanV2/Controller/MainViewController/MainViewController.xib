@@ -18,11 +18,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <webView translatesAutoresizingMaskIntoConstraints="NO" id="1yB-c7-dOe">
+                <webView translatesAutoresizingMaskIntoConstraints="NO" id="1yB-c7-dOe" customClass="AnimateWebView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                     <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
                         <nil key="identifier"/>
                     </webPreferences>
+                    <connections>
+                        <outlet property="animateDelegate" destination="-2" id="bvP-4b-kEa"/>
+                    </connections>
                 </webView>
             </subviews>
             <constraints>

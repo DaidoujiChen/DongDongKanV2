@@ -12,4 +12,6 @@
 
 @interface MainViewController : NSViewController <NSWindowDelegate, PlayerWindowDelegate>
 
+- (void)storeFinalWindowsFrame;
+
 @end

@@ -11,12 +11,11 @@
 		1C16CD951D49A83300E385B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16CD941D49A83300E385B3 /* main.m */; };
 		1C16CD9A1D49A83300E385B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C16CD991D49A83300E385B3 /* Assets.xcassets */; };
 		1C16CDA51D49AFC500E385B3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C16CDA41D49AFC500E385B3 /* WebKit.framework */; };
-		1C16CDC91D49F7EC00E385B3 /* StreamingURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16CDC81D49F7EC00E385B3 /* StreamingURLParser.m */; };
 		1C5E504C1D4C8F1A000C822B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5E504A1D4C8F1A000C822B /* MainMenu.xib */; };
 		1C5E505E1D4CAE62000C822B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5E505C1D4CAE62000C822B /* MainViewController.m */; };
 		1C5E505F1D4CAE62000C822B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5E505D1D4CAE62000C822B /* MainViewController.xib */; };
 		1CB79DAF1D4BBFFB009BE23A /* PlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB79DAE1D4BBFFB009BE23A /* PlayerWindow.m */; };
-		1CD78A041D4C449000B2EC12 /* RuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD78A031D4C449000B2EC12 /* RuntimeHelper.m */; };
+		1CFA0B271D4D0DF2001C779A /* PositionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFA0B261D4D0DF2001C779A /* PositionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,16 +26,14 @@
 		1C16CD991D49A83300E385B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C16CD9E1D49A83300E385B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C16CDA41D49AFC500E385B3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		1C16CDC71D49F7EC00E385B3 /* StreamingURLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingURLParser.h; sourceTree = "<group>"; };
-		1C16CDC81D49F7EC00E385B3 /* StreamingURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingURLParser.m; sourceTree = "<group>"; };
 		1C5E504B1D4C8F1A000C822B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1C5E505B1D4CAE62000C822B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1C5E505C1D4CAE62000C822B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1C5E505D1D4CAE62000C822B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		1CB79DAD1D4BBFFB009BE23A /* PlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerWindow.h; sourceTree = "<group>"; };
 		1CB79DAE1D4BBFFB009BE23A /* PlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerWindow.m; sourceTree = "<group>"; };
-		1CD78A021D4C449000B2EC12 /* RuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeHelper.h; sourceTree = "<group>"; };
-		1CD78A031D4C449000B2EC12 /* RuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeHelper.m; sourceTree = "<group>"; };
+		1CFA0B251D4D0DF2001C779A /* PositionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionManager.h; sourceTree = "<group>"; };
+		1CFA0B261D4D0DF2001C779A /* PositionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,20 +99,10 @@
 		1C16CDA71D49B11B00E385B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1CD78A011D4C449000B2EC12 /* RuntimeHelper */,
-				1C16CDC61D49F5A500E385B3 /* StreamingParser */,
+				1CFA0B241D4D0DD4001C779A /* PositionManager */,
 				1CB79DAC1D4BBFE0009BE23A /* PlayerWindow */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		1C16CDC61D49F5A500E385B3 /* StreamingParser */ = {
-			isa = PBXGroup;
-			children = (
-				1C16CDC71D49F7EC00E385B3 /* StreamingURLParser.h */,
-				1C16CDC81D49F7EC00E385B3 /* StreamingURLParser.m */,
-			);
-			path = StreamingParser;
 			sourceTree = "<group>";
 		};
 		1C5E50591D4CAE62000C822B /* Controller */ = {
@@ -145,13 +132,13 @@
 			path = PlayerWindow;
 			sourceTree = "<group>";
 		};
-		1CD78A011D4C449000B2EC12 /* RuntimeHelper */ = {
+		1CFA0B241D4D0DD4001C779A /* PositionManager */ = {
 			isa = PBXGroup;
 			children = (
-				1CD78A021D4C449000B2EC12 /* RuntimeHelper.h */,
-				1CD78A031D4C449000B2EC12 /* RuntimeHelper.m */,
+				1CFA0B251D4D0DF2001C779A /* PositionManager.h */,
+				1CFA0B261D4D0DF2001C779A /* PositionManager.m */,
 			);
-			path = RuntimeHelper;
+			path = PositionManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,11 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C16CDC91D49F7EC00E385B3 /* StreamingURLParser.m in Sources */,
+				1CFA0B271D4D0DF2001C779A /* PositionManager.m in Sources */,
 				1C5E505E1D4CAE62000C822B /* MainViewController.m in Sources */,
 				1C16CD951D49A83300E385B3 /* main.m in Sources */,
 				1CB79DAF1D4BBFFB009BE23A /* PlayerWindow.m in Sources */,
-				1CD78A041D4C449000B2EC12 /* RuntimeHelper.m in Sources */,
 				1C16CD921D49A83300E385B3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

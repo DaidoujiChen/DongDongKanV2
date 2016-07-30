@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "PositionManager.h"
 
 @interface AVPlayerView (Private)
 
@@ -58,8 +59,9 @@
 
 #pragma mark - NSWindowDelegate
 
-- (BOOL)windowShouldClose:(id)sender {
+- (BOOL)windowShouldClose:(NSWindow *)window {
     [self clearIfPlayerExist];
+    [PositionManager setFrame:window.frame forKey:@"PlayerWindowFrame"];
     return YES;
 }
 
@@ -121,11 +123,13 @@
     PlayerWindow *newWindow = self.playerWindow;
     if (!newWindow) {
         
-        // window size
-        NSRect newFrame = NSZeroRect;
-        newFrame.size = NSMakeSize(320, 240);
-        newFrame.origin.x = NSWidth(self.view.window.screen.frame) / 2 - NSWidth(newFrame) / 2;
-        newFrame.origin.y = NSHeight(self.view.window.screen.frame) / 2 - NSHeight(newFrame) / 2;
+        // set player window frame
+        NSRect newFrame = [PositionManager frameForKey:@"PlayerWindowFrame"];
+        if (NSEqualRects(newFrame, NSZeroRect)) {
+            newFrame.size = NSMakeSize(320, 240);
+            newFrame.origin.x = NSWidth(self.view.window.screen.frame) / 2 - NSWidth(newFrame) / 2;
+            newFrame.origin.y = NSHeight(self.view.window.screen.frame) / 2 - NSHeight(newFrame) / 2;
+        }
         
         // masks
         NSUInteger maskStyle = NSBorderlessWindowMask | NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask;
@@ -174,6 +178,15 @@
         [newWindow.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[videoContainView]-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:@{ @"videoContainView": self.avPlayerView }]];
         [newWindow.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[videoContainView]-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:@{ @"videoContainView": self.avPlayerView }]];
     }
+}
+
+#pragma mark - Instance Method
+
+- (void)storeFinalWindowsFrame {
+    if (self.playerWindow) {
+        [self windowShouldClose:self.playerWindow];
+    }
+    [PositionManager setFrame:self.view.window.frame forKey:@"MainWindowFrame"];
 }
 
 #pragma mark - Life Cycle

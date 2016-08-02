@@ -94,8 +94,8 @@
     [self.avPlayerView.player play];
     
     self.avPlayerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[videoContainView]-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:@{ @"videoContainView": self.avPlayerView }]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[videoContainView]-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:@{ @"videoContainView": self.avPlayerView }]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[videoContainView]-(0)-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:@{ @"videoContainView": self.avPlayerView }]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[videoContainView]-(0)-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:@{ @"videoContainView": self.avPlayerView }]];
 }
 
 #pragma mark - Life Cycle
